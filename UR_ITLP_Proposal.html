@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Innovative Teaching &amp; Learning Partnership — University of Redlands</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --maroon: #5B0D0D;
+    --maroon-deep: #400909;
+    --gray: #737373;
+    --gray-light: #D8D5D0;
+    --paper: #FBF9F6;
+    --ink: #221E1C;
+    --ink-soft: #55504C;
+    --gold: #B08A3E;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:auto;}
+  html,body{margin:0;padding:0;background:#E9E6E1;font-family:'Source Sans 3', -apple-system, sans-serif;color:var(--ink);}
+  .page{max-width:880px;margin:0 auto;background:var(--paper);box-shadow:0 0 0 1px rgba(0,0,0,0.04), 0 20px 60px rgba(0,0,0,0.12);}
+
+  .letterhead{
+    background:var(--maroon);
+    background-image:linear-gradient(135deg, var(--maroon) 0%, var(--maroon-deep) 100%);
+    color:#fff;padding:44px 64px 34px;position:relative;overflow:hidden;
+  }
+  .letterhead::after{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;border:1px solid rgba(255,255,255,0.14);border-radius:50%;}
+  .letterhead::before{content:"";position:absolute;right:20px;top:40px;width:140px;height:140px;border:1px solid rgba(255,255,255,0.10);border-radius:50%;}
+  .mark-row{display:flex;align-items:center;gap:14px;margin-bottom:26px;}
+  .seal{width:50px;height:50px;border-radius:10px;background:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;overflow:hidden;box-shadow:0 1px 5px rgba(0,0,0,0.28);padding:5px;}
+  .seal img{width:100%;height:100%;object-fit:contain;}
+  .institution{font-family:'Source Serif 4', serif;font-size:14px;letter-spacing:0.14em;text-transform:uppercase;opacity:0.92;}
+  .institution .div{font-size:12px;letter-spacing:0.1em;opacity:0.72;margin-top:2px;}
+  .letterhead h1{font-family:'Source Serif 4', serif;font-weight:600;font-size:38px;line-height:1.14;margin:0 0 10px;max-width:560px;}
+  .letterhead .tag{font-size:15.5px;line-height:1.55;max-width:520px;opacity:0.9;font-weight:400;}
+  .letterhead .meta{margin-top:26px;display:flex;gap:34px;font-size:12px;text-transform:uppercase;letter-spacing:0.09em;opacity:0.78;}
+  .letterhead .meta span{display:block;}
+  .letterhead .meta b{display:block;font-size:12.5px;letter-spacing:0.02em;text-transform:none;color:#fff;opacity:1;font-family:'Source Serif 4', serif;margin-top:2px;}
+
+  .sectionnav{
+    position:sticky;top:0;z-index:50;background:rgba(251,249,246,0.94);backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--gray-light);padding:0 64px;display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;
+  }
+  .sectionnav::-webkit-scrollbar{display:none;}
+  .sectionnav a{flex-shrink:0;display:block;font-family:'Source Sans 3', sans-serif;font-size:12.5px;font-weight:600;letter-spacing:0.02em;color:var(--ink-soft);text-decoration:none;padding:15px 14px 12px;border-bottom:2.5px solid transparent;transition:color .15s ease, border-color .15s ease;white-space:nowrap;}
+  .sectionnav a:hover{color:var(--maroon-deep);}
+  .sectionnav a.active{color:var(--maroon-deep);border-bottom-color:var(--maroon);}
+
+  .content{padding:8px 64px 60px;}
+  .lede{font-family:'Source Serif 4', serif;font-size:19px;line-height:1.62;color:var(--ink-soft);padding:34px 0 8px;border-bottom:1px solid var(--gray-light);margin-bottom:8px;}
+  .lede strong{color:var(--ink);font-weight:600;}
+
+  section{padding:38px 0 6px;border-bottom:1px solid var(--gray-light);scroll-margin-top:56px;}
+  section:last-of-type{border-bottom:none;}
+
+  .eyebrow{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:11.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--maroon);font-weight:700;margin:0 0 10px;}
+  .eyebrow .jump{font-size:11px;letter-spacing:0.02em;text-transform:none;color:var(--gray);font-weight:600;text-decoration:none;border:1px solid var(--gray-light);border-radius:20px;padding:2px 10px;transition:all .15s ease;}
+  .eyebrow .jump:hover{color:var(--maroon-deep);border-color:var(--maroon);}
+
+  h2{font-family:'Source Serif 4', serif;font-weight:600;font-size:25px;color:var(--ink);margin:0 0 16px;}
+  h3{font-family:'Source Serif 4', serif;font-weight:600;font-size:16.5px;color:var(--maroon-deep);margin:22px 0 6px;}
+  p{font-size:15.5px;line-height:1.68;color:var(--ink-soft);margin:0 0 14px;}
+  ul{margin:0 0 14px;padding-left:0;list-style:none;}
+  li{font-size:15.5px;line-height:1.62;color:var(--ink-soft);padding-left:22px;position:relative;margin-bottom:9px;}
+  li::before{content:"";position:absolute;left:0;top:9px;width:6px;height:6px;background:var(--gold);border-radius:50%;}
+
+  .resources{display:flex;flex-wrap:wrap;gap:9px;margin:6px 0 22px;}
+  .chip{font-family:'Source Serif 4', serif;font-size:13px;font-weight:600;color:var(--maroon-deep);background:#F1E9DE;border:1px solid #E3D3B8;padding:7px 14px;border-radius:3px;}
+  .resource-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:8px 0 22px;}
+  .resource-card{background:#fff;border:1px solid var(--gray-light);border-radius:3px;padding:16px 18px 15px;position:relative;overflow:hidden;}
+  .resource-card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--gold);}
+  .resource-card h4{font-family:'Source Serif 4', serif;font-size:14.5px;font-weight:600;color:var(--maroon-deep);margin:0 0 8px;}
+  .resource-card .ex{font-size:12.5px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:var(--gray);margin:0 0 3px;}
+  .resource-card p{font-size:13.8px;line-height:1.55;margin:0;color:var(--ink-soft);}
+  .resource-card p a{color:var(--maroon-deep);font-weight:600;text-decoration:underline;text-decoration-color:#D8B98C;}
+  .resource-card p a:hover{color:var(--maroon);}
+
+  .steps{counter-reset:step;}
+  .step{display:flex;gap:16px;margin-bottom:16px;}
+  .step-num{counter-increment:step;flex-shrink:0;width:30px;height:30px;border-radius:50%;background:var(--maroon);color:#fff;font-family:'Source Serif 4', serif;font-weight:600;font-size:13.5px;display:flex;align-items:center;justify-content:center;}
+  .step-num::before{content:counter(step);}
+  .step-body p{margin:0;}
+  .step-body b{color:var(--ink);font-family:'Source Serif 4', serif;}
+
+  .cat{margin-bottom:20px;padding-left:16px;border-left:2px solid var(--gray-light);}
+  .cat b{display:block;font-family:'Source Serif 4', serif;font-size:15.5px;color:var(--ink);margin-bottom:3px;}
+  .cat.highlight{border-left-color:var(--gold);}
+  .complist{margin:10px 0 2px;padding-left:0;list-style:none;}
+  .complist li{font-size:13.8px;line-height:1.55;color:var(--ink-soft);padding-left:18px;position:relative;margin-bottom:6px;}
+  .complist li::before{content:"";position:absolute;left:0;top:7px;width:5px;height:5px;background:var(--gold);border-radius:50%;}
+
+  .accordion{margin:8px 0 4px;}
+  .acc-item{
+    border-left:2px solid var(--gray-light);
+    background:#fff;
+    border:1px solid var(--gray-light);
+    border-left-width:3px;
+    border-radius:3px;
+    margin-bottom:10px;
+    overflow:hidden;
+  }
+  .acc-item.highlight{border-left-color:var(--gold);}
+  .acc-header{
+    width:100%;
+    text-align:left;
+    background:none;
+    border:none;
+    cursor:pointer;
+    padding:15px 18px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:14px;
+    font-family:'Source Serif 4', serif;
+    font-weight:600;
+    font-size:15.5px;
+    color:var(--ink);
+  }
+  .acc-header:hover{background:#FAF9F8;}
+  .acc-icon{
+    flex-shrink:0;
+    width:22px;height:22px;
+    border-radius:50%;
+    background:var(--maroon);
+    color:#fff;
+    display:flex;align-items:center;justify-content:center;
+    font-size:15px;
+    font-weight:700;
+    line-height:1;
+    transition:transform .2s ease;
+  }
+  .acc-item.open .acc-icon{transform:rotate(45deg);}
+  .acc-panel{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .28s ease;
+  }
+  .acc-item.open .acc-panel{max-height:700px;}
+  .acc-panel-inner{padding:0 18px 18px;}
+  .acc-panel-inner p{font-size:13.8px;line-height:1.6;color:var(--ink-soft);margin:0 0 12px;}
+  .acc-panel-inner .complist{margin:0;}
+
+  .fund-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin:6px 0 24px;}
+  .fund-card{background:#fff;border:1px solid var(--gray-light);border-top:3px solid var(--maroon);padding:18px 18px 16px;border-radius:2px;}
+  .fund-card h4{font-family:'Source Serif 4', serif;font-size:14.5px;font-weight:600;color:var(--maroon-deep);margin:0 0 8px;}
+  .fund-card p{font-size:13.8px;line-height:1.55;margin:0;}
+
+  .range-banner{background:var(--maroon);background-image:linear-gradient(120deg, var(--maroon) 0%, var(--maroon-deep) 100%);color:#fff;border-radius:3px;padding:26px 30px;display:flex;align-items:center;justify-content:space-between;gap:20px;margin:4px 0 26px;flex-wrap:wrap;}
+  .range-banner .figure{font-family:'Source Serif 4', serif;font-size:34px;font-weight:600;white-space:nowrap;}
+  .range-banner .figure span{font-size:15px;font-weight:400;opacity:0.78;display:block;letter-spacing:0.08em;text-transform:uppercase;margin-top:4px;}
+  .range-banner .desc{font-size:14px;line-height:1.6;opacity:0.92;max-width:420px;}
+
+  .scale-row{display:flex;gap:16px;margin-bottom:22px;flex-wrap:wrap;}
+  .scale-card{flex:1;min-width:220px;background:#F5F2ED;padding:16px 18px;border-radius:2px;}
+  .scale-card .amt{font-family:'Source Serif 4', serif;color:var(--maroon-deep);font-weight:600;font-size:15px;margin-bottom:5px;}
+  .scale-card p{font-size:13.8px;margin:0;line-height:1.55;}
+
+  .criteria{display:grid;grid-template-columns:1fr 1fr;gap:10px 26px;margin-bottom:6px;}
+  .criteria li{margin-bottom:0;}
+
+  .closing{padding:38px 64px 46px;background:#F3EFE8;display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;}
+  .closing .who{font-family:'Source Serif 4', serif;font-size:16px;color:var(--ink);}
+  .closing .who span{display:block;font-family:'Source Sans 3', sans-serif;font-size:13px;color:var(--ink-soft);margin-top:3px;}
+  .backtotop{font-size:11px;letter-spacing:0.09em;text-transform:uppercase;color:var(--maroon-deep);text-decoration:none;font-weight:600;border-bottom:1px solid var(--maroon-deep);padding-bottom:1px;}
+
+  .cta-box{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:22px;
+    background:linear-gradient(120deg, var(--maroon) 0%, var(--maroon-deep) 100%);
+    color:#fff;
+    border-radius:4px;
+    padding:24px 30px;
+    margin:22px 0 30px;
+    flex-wrap:wrap;
+  }
+  .cta-box .cta-text h3{
+    font-family:'Source Serif 4', serif;
+    font-weight:600;
+    font-size:19px;
+    color:#fff;
+    margin:0 0 4px;
+  }
+  .cta-box .cta-text p{
+    font-size:13.5px;
+    line-height:1.5;
+    color:rgba(255,255,255,0.85);
+    margin:0;
+    max-width:420px;
+  }
+  .cta-box .cta-btn{
+    flex-shrink:0;
+    background:#fff;
+    color:var(--maroon-deep);
+    font-family:'Source Sans 3', sans-serif;
+    font-weight:700;
+    font-size:14px;
+    text-decoration:none;
+    padding:12px 24px;
+    border-radius:3px;
+    white-space:nowrap;
+    transition:background .15s ease;
+  }
+  .cta-box .cta-btn:hover{background:#F1E9DE;}
+  .cta-box.compact{
+    padding:16px 24px;
+    margin:26px 0 8px;
+  }
+  .cta-box.compact .cta-text h3{font-size:15.5px;}
+  .cta-box.compact .cta-btn{padding:9px 20px;font-size:12.5px;}
+  .cta-note{
+    font-size:10.5px;
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+    color:rgba(255,255,255,0.55);
+    margin-top:6px;
+    text-align:center;
+  }
+
+  @media (max-width:700px){
+    .letterhead, .content, .closing{padding-left:26px;padding-right:26px;}
+    .sectionnav{padding-left:26px;padding-right:26px;}
+    .letterhead h1{font-size:29px;}
+    .fund-grid{grid-template-columns:1fr;}
+    .resource-grid{grid-template-columns:1fr;}
+    .cta-box{flex-direction:column;align-items:flex-start;text-align:left;}
+    .cta-box .cta-btn{width:100%;text-align:center;}
+    .acc-header{font-size:14px;padding:13px 14px;}
+    .criteria{grid-template-columns:1fr;}
+    .range-banner{flex-direction:column;align-items:flex-start;}
+  }
+  @media print{
+    body{background:#fff;}
+    .page{box-shadow:none;}
+    .sectionnav{display:none;}
+  }
+</style>
+</head>
+<body id="top">
+<div class="page">
+
+  <header class="letterhead">
+    <div class="mark-row">
+      <div class="seal"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIoAAAB4CAYAAAAt3Wp2AAAKtGlDQ1BJQ0MgUHJvZmlsZQAASImVlwdQU1kXgO976SGhBUKH0Jt0gQBSQg9dOlggJCGEEkMgqNiVxRVcCyIioCzoIkXBtQCyioAoFhbBinVBFgV1XSyICsr/gCHs7j///89/Zs4735x37rnn3rn3zXkAkGksoTAVlgUgTZApCvVxp0XHxNJwLwEWaAAcsANoFjtDyAgJCQCIzNu/y8d7AJqxt81mcv37+/8qchxuBhsAKAThBE4GOw3hM4hOsYWiTABQJxG/7upM4QzfQVhBhBSI8MgM8+Z4aoYTZhktOxsTHuqBsB4AeBKLJeIBQLJE/LQsNg/JQ5qZy1LA4QsQ3oywS1raKg7CbQgbITFChGfy0xP+kof3t5wJkpwsFk/Cc2uZFbwnP0OYylr7f27H/5a0VPH8HIaIkpJEvqGIVUb27PeUVf4SFiQEBc8znzMbP8tJYt+IeWZneMTOc0ZqGHOeOSxPf0me1KCAeU7ke0ti+JnM8HnmZniFzbNoVahk3kSRB2OeWaKFGsQpERJ/EpcpyZ+dFB41z1n8yCBJbSlh/gsxHhK/SBwqWQtX4OO+MK+3ZB/SMv6ydj5TMjYzKdxXsg+shfq5AsZCzoxoSW0crqfXQkyEJF6Y6S6ZS5gaIonnpvpI/BlZYZKxmcjhXBgbItnDZJZfyDyDAOADaCACseEgFDBAFGACT+CVyV2TObMYj1XCtSI+LymTxkBuHJfGFLDNF9GsLa3tAJi5v3PH433/7L2EqPgFn5CKHOtixDm44IvrB6BJEwCZXQs+A+T8y/oB0N7KFouy5nzomQcGEIEMUAAqQBPoAiNgBqyRr4QTcANewA8EI/XGgJWADZJAGhCB1WA92AJyQT7YA/aDElAOjoBqcAKcAk3gPGgHV8AN0AvugkdgAAyDV2AMfASTEAThIDJEgVQgLUgfMoWsITrkAnlBAVAoFAPFQzxIAImh9dA2KB8qgEqgCqgG+hk6B7VD16A+6AE0CI1C76AvMAomwQqwBmwAW8B0mAH7w+HwCpgHp8PZcA68Cy6GK+HjcCPcDt+A78ID8Ct4HAVQUigqShtlhqKjPFDBqFhUIkqE2ojKQxWhKlH1qBZUF+o2agD1GvUZjUVT0DS0GdoJ7YuOQLPR6eiN6J3oEnQ1uhHdib6NHkSPob9hyBh1jCnGEcPERGN4mNWYXEwRpgpzFnMZcxczjPmIxWKpWEOsPdYXG4NNxq7D7sQewjZg27B92CHsOA6HU8GZ4pxxwTgWLhOXizuIO467iLuFG8Z9wkvhtfDWeG98LF6A34ovwtfiW/G38C/wkwRZgj7BkRBM4BDWEnYTjhJaCDcJw4RJohzRkOhMDCcmE7cQi4n1xMvEx8T3UlJSOlIOUkul+FKbpYqlTkpdlRqU+kySJ5mQPEjLSWLSLtIxUhvpAek9mUw2ILuRY8mZ5F3kGvIl8lPyJ2mKtLk0U5ojvUm6VLpR+pb0GxmCjL4MQ2alTLZMkcxpmZsyr2UJsgayHrIs2Y2ypbLnZO/LjstR5KzkguXS5HbK1cpdkxuRx8kbyHvJc+Rz5I/IX5IfoqAouhQPCpuyjXKUcpkyrIBVMFRgKiQr5CucUOhRGFOUV1ysGKm4RrFU8YLiABVFNaAyqanU3dRT1HvUL0oaSgwlrtIOpXqlW0oTymrKbspc5TzlBuW7yl9UaCpeKikqe1WaVJ6oolVNVJeqrlY9rHpZ9bWagpqTGlstT+2U2kN1WN1EPVR9nfoR9W71cQ1NDR8NocZBjUsarzWpmm6ayZqFmq2ao1oULRctvlah1kWtlzRFGoOWSiumddLGtNW1fbXF2hXaPdqTOoY6ETpbdRp0nugSdem6ibqFuh26Y3paeoF66/Xq9B7qE/Tp+kn6B/S79CcMDA2iDLYbNBmMGCobMg2zDesMHxuRjVyN0o0qje4YY43pxinGh4x7TWATW5Mkk1KTm6awqZ0p3/SQad8izCKHRYJFlYvum5HMGGZZZnVmg+ZU8wDzreZN5m8s9CxiLfZadFl8s7S1TLU8avnISt7Kz2qrVYvVO2sTa7Z1qfUdG7KNt80mm2abt4tNF3MXH17cb0uxDbTdbtth+9XO3k5kV283aq9nH29fZn+frkAPoe+kX3XAOLg7bHI47/DZ0c4x0/GU459OZk4pTrVOI0sMl3CXHF0y5KzjzHKucB5wobnEu/zoMuCq7cpyrXR95qbrxnGrcnvBMGYkM44z3rhbuovcz7pPeDh6bPBo80R5+njmefZ4yXtFeJV4PfXW8eZ513mP+dj6rPNp88X4+vvu9b3P1GCymTXMMT97vw1+nf4k/zD/Ev9nASYBooCWQDjQL3Bf4OMg/SBBUFMwCGYG7wt+EmIYkh7yy1Ls0pClpUufh1qFrg/tCqOExYXVhn0Mdw/fHf4owihCHNERKRO5PLImciLKM6ogaiDaInpD9I0Y1Rh+THMsLjYytip2fJnXsv3LhpfbLs9dfm+F4Yo1K66tVF2ZuvJCnEwcK+50PCY+Kr42fooVzKpkjScwE8oSxtge7APsVxw3TiFnlOvMLeC+SHROLEgc4Tnz9vFGk1yTipJe8z34Jfy3yb7J5ckTKcEpx1KmU6NSG9LwafFp5wTyghRB5yrNVWtW9QlNhbnCgXTH9P3pYyJ/UVUGlLEiozlTAWmUusVG4u/Eg1kuWaVZn1ZHrj69Rm6NYE33WpO1O9a+yPbO/mkdeh17Xcd67fVb1g9uYGyo2AhtTNjYsUl3U86m4c0+m6u3ELekbPl1q+XWgq0ftkVta8nRyNmcM/Sdz3d1udK5otz72522l3+P/p7/fc8Omx0Hd3zL4+Rdz7fML8qf2sneef0Hqx+Kf5jelbirZ7fd7sN7sHsEe+7tdd1bXSBXkF0wtC9wX2MhrTCv8MP+uP3XihYXlR8gHhAfGCgOKG4+qHdwz8GpkqSSu6XupQ1l6mU7yiYOcQ7dOux2uL5cozy//MuP/B/7K3wqGisNKouOYI9kHXl+NPJo10/0n2qqVKvyq74eExwbqA6t7qyxr6mpVa/dXQfXietGjy8/3nvC80RzvVl9RQO1If8kOCk++fLn+J/vnfI/1XGafrr+jP6ZsrOUs3mNUOPaxrGmpKaB5pjmvnN+5zpanFrO/mL+y7Hz2udLLyhe2N1KbM1pnb6YfXG8Tdj2up3XPtQR1/HoUvSlO51LO3su+1++esX7yqUuRtfFq85Xz19zvHbuOv160w27G43dtt1nf7X99WyPXU/jTfubzb0OvS19S/pab7near/tefvKHeadG3eD7vbdi7jXf3/5/YF+Tv/Ig9QHbx9mPZx8tPkx5nHeE9knRU/Vn1b+Zvxbw4DdwIVBz8HuZ2HPHg2xh179nvH71HDOc/LzohdaL2pGrEfOj3qP9r5c9nL4lfDV5OvcP+T+KHtj9ObMn25/do9Fjw2/Fb2dfrfzvcr7Yx8Wf+gYDxl/+jHt4+RE3ieVT9Wf6Z+7vkR9eTG5ego3VfzV+GvLN/9vj6fTpqeFLBFrthVAIQonJgLw7hgA5BgAKL0AEJfN9dezAs39E8wS+E8814PPCtK5VLUBMNN6BW0GoAJRA0Rl3AAIQTTcDcA2NhKd74Vn+/YZ0UT+G7ImANr/a//2C+CfMtfT/6Xuf1ogyfo3+y9AMAySP+sFdwAAAFZlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA5KGAAcAAAASAAAARKACAAQAAAABAAAAiqADAAQAAAABAAAAeAAAAABBU0NJSQAAAFNjcmVlbnNob3TjLOJrAAAB1mlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNi4wLjAiPgogICA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgogICAgICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgICAgICAgICB4bWxuczpleGlmPSJodHRwOi8vbnMuYWRvYmUuY29tL2V4aWYvMS4wLyI+CiAgICAgICAgIDxleGlmOlBpeGVsWURpbWVuc2lvbj4xMjA8L2V4aWY6UGl4ZWxZRGltZW5zaW9uPgogICAgICAgICA8ZXhpZjpQaXhlbFhEaW1lbnNpb24+MTM4PC9leGlmOlBpeGVsWERpbWVuc2lvbj4KICAgICAgICAgPGV4aWY6VXNlckNvbW1lbnQ+U2NyZWVuc2hvdDwvZXhpZjpVc2VyQ29tbWVudD4KICAgICAgPC9yZGY6RGVzY3JpcHRpb24+CiAgIDwvcmRmOlJERj4KPC94OnhtcG1ldGE+CqSKQx0AAC4LSURBVHgB7Z15kF1V1fb37b49ZugkQEJCIIaQEMYAMiggQtQooqBMQV4UEOHFoaReS6teLYfPoRzKoT5L/cupHMqx1PqcFSlxntByAgQZwowMCRl67r79Pb917nNz+ub2cJO+nSad1bV7n7PPHtd69tpr77PPvoXe3t6RtI+QG1IYqz2O4OfV94TXChszQ2dU9mulrYrSsFvq2DSsf6VyEa503i9E80ZSIWI5NtVukmst++UMRnnFUXf78k21EKvv3Xbz1ff4tcLyz2fCdbmONCu7LF+N7AxJBSCSgSVfZWLY5cPz1/sUUOqSZ3Vk3Y+U//IM4noiJhIHARSUB/7eIQMC3VCmkXJdeJSjpqhnBij0D45U49V8nwJKjhe7Xo7HBcUGJMNiGX417RpSHaMMlGD1ZGLvmn5PQwKoAdMcUGhLvjq5a9jRrH/EdvB4LJo9QKmShJnjYN/XYhZhfu741T4KvVba6niNu6f0ncNKVpdcjfIN4JpH8jMtyAU1y8XnNkezCijVvMrfw6JM/Y7NrBzfal5mKXc/fc1MJxlIW2zGch1tcVUI4Drf4EpYLtDxFbWaZgVQzAr7MMHX9lHdTbDXAflI1VybgfeFTDVUwEIVkTv2SIWqwZJvLO3Ox60kyi5mBVCq2hy35tko3mD85YFCzOp7Z1YrfFRmjjiNfq76aBeqE/LXBde4SiDXdRAaqi7q6elJIzHlUiXkl0qZwuvr66srn4ZEpl55Vy7ETCqVhtPw8JDqLF8ONgbzyvFikgBHQm/L52H1vTOr5Zfz2VseoOgdGEw7kJGut/f2hoYZFE9o7aDckFz0h6i//pU10ShGKE411aVRhoeHU7FYVN6UklFTU4a19vb2Cmj8rF7fAKw3neM3Nzf7sqZfbNr1OWXyVwIRapZ7Itc7W7krP7UksQsRVCN4l3iNDJjb2pJG5KCipjXUZ2BoILW2tEZ7XMcm3bl9vvJ9JK76VxdQEISFAWj6+/tTS4sqRi8Wtbaytrf3iDq5LtSC61GNL+leIB/lFAf4DDWV0lChKXocaZwu7zs8/PIDP7cAMk5Q+vQSbRgZ6Bc4MsAnOjD3Ak1RMmLiv9PYZWUW3mQQoc5uh/3q2hd2Zwm/u7s7oUEMGjJlCMoLqbqg6bhvKmuUmo2FGwJSsKSsBUd1f/G1VzAZVmKnH9XrlL4oIPEMbeI4+XaVgv0UNP3UTGe1UweWCkEo9N6obI+GodaOzoBHNp4SnAGF2ka7yn6t2telUbBDGHoYbgDJ9u3b09y5cxPhaBae7U3qVQ9CWzThqCOCZZi07Bh6uKZrwVQYOSwXdtZw6kBje0xxmkhfvsFzuH0FmZoKysvpHThdPm2iLciADoFBMjiUhnZsT8WFC1KrtGmRzqwhdiSQrp6RIwMlFzTqsi7JGiAAAjX/9a9/PT3wwAMJA3fhwoUJTbO3CAOtta0tFTQfbBYgWlTHlmY5+UVAgw0iRjZJwPCJaSNAai4DqlnoaR7pVywxmSFKDYmhC0AIVCH/sh98VnCEucG6GVHm/O0NQuz93T1p3vyuhPE6KFBs7+9LpWJzOv+SS1LXYSs0vpbUcVTvmDMD6p1gCUOeRo9BdQElb4MAih/84AfppptuSoODg6lNQsJm2atEQ0PC8gUAhgpcAEIPhjUjkCke960CUGdbe+ps70htGkbniWctOzan1mF1RTF6RGAJmesa4BAGqAgLsJUbatDQSzOg7B0OlGi3tHo7Gn5wIPWpI/eqzu1d89Mxa49KJy1Zpp4hcVPhEYHE2rUMDoLDWBuj+nUBhTx27NgRw82cOXMqRiHh0fuA6x6QZ1C7kwXtLMiQw88EXQqtVxoZCuxQM/oPVgqCBtzDYiQMxi5p1gzhuGccnto0QwiS9imgWdQLm9Q7m4ZHUqfGe2wB0gdiKA2AxJ3+q6dGz4wMpvcfbegRAJpb21P/wEAqCdQApVd16mhtUwPVepgQKiUqnFWQysMYno1DdQGF4QabBNq2bVt605velDZs2JAefPDBGHa2bNmS7P7973+H7YL9Mm/evLBnsGsAlF2+XtgShGProJkY3oaGhsIWolwo7A8xgHhev8nnkRmrETHAAvBaJFxslpIEP6ie1i6mNUnLUMZgaUCuOT25rScN9veme/7zUOqSdlnUtSAtXrAoLeycmzqEpJb+odTUOyCNpLxVJ3oknRMNMigDeEi2SfB7hLnHBBwfVeGpuwEoTQLDsPjdoRvqAw8BTefcrtA2gLiEhuUinCIBEjnij1fzuoAyoEIZYhAANsnpp5+eTj755BAaQkSgGLgIGKDceOON6VOf+lSEUWkEPB4hfA9fDHPkQ56kBWxLliwJf/78+QEo4mMfPfXUU2nr1q1hL5E/wKAkyqPOLpd8esoGb4tmBUNK/1T39qhSUSDeorK29vakx/oH0qM7utNiMXjZvAXp4I55aVHn/DSkjoDGLmnRbgTwCihNLbKBmjOboCRQFfaWSlErEDTarohhKxoRYIoxJumJeDIkQAxHLA2/ESGDB/9JMp5iqQsoHR0dZB+Md+9mmpwna5xDDz00LV26NN13333phz/8YURB8OMRIDQ4zjjjjLR8+fJEPocddlg6/PDD04IFCxJ1oEzKBygMIdhLmuaHlrvzzjvTL3/5y/Sb3/wmPfroo1Ecders7AzQASiXkR/qSmgpxcb1lobS4I6tabtmDD0Cfv+CA9PA3HlpjrjbLAAXpIUG+nvEiFJqadI6kqRTEnCyyfN4LXz6PqsLKDQT4eBgMo7eirBwEGEIkd571FFHpY0bNyaEd+utt45ad4nIVf+sTdAc119/fVq/fn2AAq1AvuRpcnkMVSbinXnmmemKK65ITzzxRPrXv/6VfvWrX6Uf//jH6Z///KejRT75vNBa0aYWzY00ptMrhzW17BMQHu7ekvoEwsdb2tKRyw9NzR2taW5RC1hNGnI0XJUEfgzBoaHh1Fpex6kUtA9d7OT8JBpVS2CAgmECh/AsOBgPrVy5Mh1wwAGTyD2F/YNmoNdjz3hBz9cAifwNGsqGDFbPygABWgh37LHHpmc/+9kBmg996EOVoZE8SW/ANWkaiVZgglNUW5qLbVrpHEr9AsDmUn/q03DUvvWJVGqRjdU2LzW1skRAGtlR6iw73zyPN9JPig0zMlJdQLEgaAm9ECYjJJiOcBAgxis+4cTHtsCm4Dlh4xEzKoihhWHLoAM8zLLIz+DAJz/7XFMnwGxAM+QsW7Ys3FlnnRVD2Te+8Y2Y1gM66mli6LE1N6R8srFcACBKud73b31SaxTSJHKLNLVuE2gpl/G+VUAbZsHLmTjjafPH5+2eVqMuoFgwFAqTq+0TwgEPwjMwFi1aFJoCIeYFQ9xqwo4gDgYqWgUjFRASZoCQhrwQNPUBTJSFTxxsGNtSzt+20aWXXhpaBuBiaDM8QeQfGlBDT8hZ2lCjjsbZ7K0rWkbmaxoe0hC75QmVP5iaFi9JS9o7U7PiFTRMSf8purTNvqlQtP5UB+WFlb+GydYwMN2aAGFz3dXVFT5xxiMAYkITYbxCgI+00XvLQ5JBSnkQz4gDaHwPmAAadUC7YPQ+61nPCrBgOH/hC1+ogG1YyIg9s2gFOidOeccMimdCS6nYlLYPltJj27elJQsWpoM0fWZ1szSkZyNq2z4KEvhZF1BIUIsQFg4h5QGEhqA304PxbbfUysPaylqC+DjnicDzZIA4jHINEsK4N5gcxwCmPh/84AdjmPza174WU37WhYqyO0YkeFZlR8LGkq/EOEDAIhYv/voFyrsfuD/NGWlKqxctTt1beEmqRS2sYJVL3cwH2kO73T7XpXF+1HbKs58SoIxXKzNsvDjT9QwbB60CoNAwF154YXr44YdjOh1AFEAKEizyht0oCHz0oIJlm0joumbdbYc0z/ae3tTfVUpFaadm5YlOIkUs/ysx4AgqexnisqAp/99gbTalQKkGBfd5N+XM2Y0MMXQZCqGXvOQlYQf94Q9/yIY2hcHvAEtcZwt3ugwIxKikCAMSPPGe0DrLDq32dsmwZW02ZKUhqKJFGooMajV9tNPsb0CZgCSvhhtQRF1ZMpQxe6JONrrPO++89KIXvSgbGiVY3v/wx04NFtBw/AGN0BB6JzQkh1bZolXczXJDGrJ6sb/U3iwe601oFmkVVJAsXHLK4JXFmfLrBlvR0wKUantCHNsrhHHrKb5nTczKWBQsaHoLr2V2SDugSTKBZiLO4KJAWXXNaUhGbQBFMR/v3qEXbyNph14mSpcEmDzk2J+2xnqIa0CBDQGKGWRtUj0kNaAdk8qSmQ5E/bBR8JkpnXrqqWnt2rXq5BmneT2CIhhFMnI1BVIcnADRVkhsqniid0fqU1C/3IDGptAkkY0gpjR2U65BykAene+oGk/pTUOBQk1nElg8K/I0nbqhWXhlcNbZzw0AMEIw9CDrDDZCABoGj1f1TIM1iylpuEGrPDXQlwa1/lLQ0v6QdvZ7ZjfThl1VdY9oSo3ZParJNCfGRmG6jANAJ554opERNUGjMJQw6AAbBD8iYGnVLZ5jc/Bqf4fu+9uKWsbvSN0ylAEU0Vr0jwl9DGLMpoBdhrxQAuUQxY8nkSezrZ2RImjS/6IcxUYpgmnKCn/SOYwfUU2aenKvoudiQHo9ZepLqj9Hhhs0CdNhrgEKrw5OPH5dWn3EkZoDl2JlN7SK4hWkObQCFO90ijZi2JLSLXtHabs13Bx52qnpmv99S1qwelV6eKA3bZHWaV3UpeGolLp7dmg7plaxZduwFx7XHFYuy3va+S83KOkOo6zkI9zddgIHYNOuh/C5tjNII2+F+36yHGwIUCZb+N6IBzhsM3ENAZoOTXFXLFuuHqmFO0Ckv5IEN6DlegQKZ4f0HisNsp0g+8P+YOWkpPWZQ9asSVe+4fXphLPOTNukZe57/LE0rKGqU1sRSwLGdq3mRq/XNdNvXEgLFcDOON1lVA6PkDquyVMZGAi+dq74hO0uzcqhB6Dg0HZoF7QKrwzY/8KsiHAIIFk7Eo9rQOVr7BvoySefTAsOWJSWr1iRrtALzXla+f2N3iU9umVzOkIvJVsl7216ncHOHWZREHaxZtlBhdAwPNkJl+zJzPk/q4CC4K1FEIGvsVEYHgELC3IOt09cgAVAIMINIO43b96cmpSHFmfSsmc+M71SC3odAswtN/8iPbLlqdQFEA88IA1oJZfN3Rkg5AsX6C58yH52N7P+z8qhJy8CC5z3QkyfDQ4PT45LPJztLofzppp0zdrMhGGKqpi7enV65X9fl87/r1ekprlz0qb//Cem0oNoMUVhnYb8MXaLAklRxm6RIcmZzkB/VgGlWvjc54GRf4nIcGRyPGsUwp0ODYQm6u7rTQVppX7sGG1HaD7kkLReq77nX/aKtOKotemuhx5KAyqPKfVw2CTSUAEWAUYaqkkus1tc6szyZ9XQA+stYK4NAMLQFvFisBzOc8cFNACC+ICFcD9Dw7AOwwtDpsuaMoWlUZCdU9TOvnM3XpIWaSP61z//+dSn/TU8ZMrN90ZB0iTYKlIq8elIFjjz/s8qjVLNfgQPVQ8pgMAGLc+tXQAFca1ZvIC3cqW2ex54YGw/6NOi24h25mvfQWxLSAcdlE5df3Z6+SuvSH0CWb/coNyQtArAihk3hcxwaihQ3PMskJnAC4QNseBm7UD9AACfmhgErrM3PJHGQxMAwQGmI444Iq1atSrsC9K0yF5hLsRnnYBFqicVBJbnXLYxbbzm6jTc1hovE9m4PSigtHZ26Mu+wdSjGRTpqx3lzgRqKFBmQgOr62BN4WEGYOAIZ2+uAeJ0BhbhToPx6nz40oBN3LHnVokEj3DDgE/rKLGay9K/ptUbtP/l2jfekHr17Ent5ivKprlj06Y0ItAtWbY0M4Zd8AzzZx1QbFtYc6BJIDY0PfbYY2F7uFcTbkAQRpx8GNd8HsLHcGgOmMlMJmMqC3YaXgIsChVQGIZOev769Ep9ijIikNz9yCNpgQDSK2ht1upwbHFQPtbErivl7G2adUCxvQHjAQlDEMT+Xj5WM3CsWaxRLDRmON7bywao5z73uSFYPmBnZoCTHokZDdqlAhYBZUgaSwss6UWvviqd85LzEgdoNWl/THHe3PTY1qc0bd4JEiUdRa7PqMBpvJl1sx7vR4HHgMDDCTvyAQpkUMRN+Z/DbMASfP7558d3Q1zL3IhpLuBg1ZUXihrH+K/3OfL10qWAzYJmESgvverKAOn39fnIYQcfnDqllYb79QUDNg3pyr6S7zIcEjbdNOs0ioccGI3QvUflH//4R3xgbwEYGNwbTMTnI3wIbXL11VfHM57zNSHWCcvxrIlo40HEAyjMbFg7aZIhC7Ge0qavDi/6r8vTSRq67n30kQjDzKZcl20/Eu3lf7NKo2BvWCPktQnvavjsFAJICCg/5DBc+Z44h2gx7eKLL45PPxiqAnzYOkoXJB9dEqcoKAArCNiw2Dak9Zi5fIaiGVbXqiPStW94Q+zb3XLfA3ontBMkijojNAn1gGaVRnEPBTA2UmHCQ1o15cN2BM6SvMHCM9KgMRzG89Vaon/jG98YgiQfFuPaZZxWSBoDYOBgMM7XHZoO9/L9knbYJWmYJUesSlcJLG16qTggw5c1FmZMQI032U1lxzVhsftOmeGjqaB4AY0fd435N6OAYoMN4djRbIfvKQtsyPLWlzyZDuO++93vhrDJn3uDg/gxrGhZnvhoFTZnv//974/PVDGAsXlw8Tksq60VJyErP14EsAETNyJQEdah9z+hfbBXFi1MCw5fmS6+/rq0adtTae4hS7VhWy8PdRJUR1un0uszkH594qpvoDGMWagbULJBuViwU35hPKPF5BpFMwoojWqk8wUgCNc78dEOt9xyS/q8ltfRGMxoGEoABbYLMyLAQTg+R2/woTsfvqNJAAjAYhY0V3GUMHPlAunhOJgcoFEZ3APEfnbKYfUq7GAB5cQzTk+X//e16S+33xZvmjlMuFcfxvf29qeuefN1uoK/hs60iTUL6gSN0ug3z7MKKAgfcMRXgeWV1c985jPpP3q7C0AMIuwYT4El11ix5evC1772tenyyy8PUPFdNHlB+ZlUBIzxDzBC1pbez0J5C7Vv5YJLLk6rjj0qPak1lQ6Vt1XfDXXO6RRg+mI3nXevNQslAQ4NRjaWGYYap08yoI/RrKd3sIWR99EKCBWNgV3xxS9+MX3/+99PfLJh4jQGBAgwDta0FeIbaDTJa17zmrjH+OU5xNCEoAHfZIj6QNTDw1oARu+I2rVn5fr/uSG1L5ins1l0nOmC+Tr6q5R6+zhoWKdFCA2AxNsbrUV2apfJ1GD34uzTGiUPEjSGtQRDyc9//vP00Y9+NMIef/zxynADmOj5CJ4Tm9atWxfxrrrqqnjXw/sg0iNoBGytYOCMJwbq4OGMMgAY74/w9S++KTri7LPSS19xaXpk65bUInvocW18apdWAV/WKBy9FacolAtDmwCW/RplPO7XeOZey6M8WBAw9L3vfS998pOfTPfcc08mJIWhZRA6QkOg0Lnnnps+9rGPpcsuuyzu/Zwhxy8VyRM7ZTJkcBDXZXBN2XxSWJijoaxYSM/Tqu3xzzo13f3wg6ljoTZpl8HrWRCbp72BGniwogtQGkn77DqKAQLzfM2QwVFd7373u+MwQkCBBmHxDPsErYDQ2V/yqle9Kr1B01ZOiyIdPkNFfubEm2UIAFBGCDxCxv5HXBxAwyAmDWk55rS9Tes1OhuudemStPHqK9N9d9ylhbti6n5iS2rr1EwJwOTUBnAO2wSchdGSTcvHLn33n+zTQw9sMUi4vvnmm9OVV16Z7r777hAWQEFogARDl+HmmGOOSR/5yEfSO97xjrBNeA5IGHKID5DQBoDEwibtZEDiYYq6ADjyw2cYK+rXL7RbN1ZoWV9Zse74dMHll4VWKXS2p259DG+MgAkAYyUShyGTaQNpRmkUmI0qRygwH+KNLdNZCMG4R3MPCCAER+8kDWEIhLy4R7CsurJW4rNQMGRtYzgPDFdmNbwNfqY2SEMYtpSJQL0XxXXheb4u3E9EbpPjAUJTk84l5VSnZp2D262jS+foe6Jzzjs3PXTvpvTL//fDdNginYOnevM+iK8V58zrTAMygHuG9H2R2tmtKTqncTeKGpfzbtQYoQEMhIzgEQQgwDFE5AXDPUMBhI8DIAgDoXIi5G9/+9s4RpSjRP3CjzhsC8CwpZyVK1emF7/4xWGPHHfccZUjMaw5yI94BtRuNGvSSXSqbiywFfWGWdv6U4uGIGyVTXf8Oz0it0inUnew9qITnnq0o39EeyibtZoLf6hjI2lGAYWeS2/nbFnv/XAvpPcBDhhi4NDbuabnI/j7778/Dsb505/+FMPM3//+9wrvyAdbhD0nfrF3zTXXxGE6bD5avHhxBXgGoddJyATgGpiVTKf0grURaRi1r7lZLw+lLXSaYHrmc85ID95zb/qOhssdOkyZVV1hQ68BulNLu4YvdSbOvgc/jaQZBRQEBLGYxayE4YKeTW9GUAgaMEGAA9uCuAifa7YKABjARjyGCYCEFsERD21DOeTHCuv69esjDkBkGR6fOAxNEGWTh+8jsAH/kHNrQZ98UKb+dsio5TzbtPiAtO7009Ltf/t7uvOPt8SLxfntrTrOtCdeOnIu7lCfdv3Hr35lQ3EDqhf7bBqR727liUAghM0vd3CPoBASgvXzfOb0coRrMPkZYABMBh8aBbA4LvF+8pOfpOc973mx75V7DFTKsBonLVqL8h1GvEYRWxOyz1c11EltbNUnIF2q06FHHpHOOvcF6Z7bbxOAelNHsTM6AnXipQDn47YXOyptbUT9dlpTjci9zjzRAggeBiAkhA8hXMIYCnB5oVmYxEUT4Pjqj3jWPuQBSJi9AEKusXcwcn/2s59FfmguE+AgX+pCfpTfaIqRQx+8j3D+l6i9VW+j2c2vKU7zAQvTutNOTkevOy716fj1HdRVQKLNpIMftX4vMTKaon+N50AdFaXhCAjtgZ2CY7hBWAYHQgMI9H6e4RA66QAGQgYM2DgAgrisjxCf9RAIDUE6iHc9f/7znwNYgIVhi7KqwUF4owntoPfV+p9tKWjRSZPa7aJFuOY05+Al6cUXvizN0wIcNklBfODIU3jGVJlTLFmQaxTNKBslGi0G8G7l9a9/fTr++OOjV6MdGEYQIA5QcM/SO2fc//rXv04YrtgYgAbAIFjyAyzWEDDxIG1wJh0O8Nx2220xBJ100kkBDhvPlGHNQ56NtlFCwGWLlPoyA2oWQDjONNSG6rDmhRvS3C9+KT2q5YNBGbojegMtmOhHHGT7Mm1mBqSMYpUW8ESmE/+bTLwZBRTbJKyj8OsaJ5xwQggdDYPwEbw1C4LkGmHyc3Wb9NkD+0Q44RFCIwAEiPwAG+ABIBCaJvaQ6PoTn/hEesELXhDvdQwuDzkAEqC4DpG4gf8QGkent8VOFgoCBdIUOpYDyV+kb5o/938/nh647/50cNuctG17T1rQNle/y6MO0SqtovUYwBOHJOvKNpyYFxpHLAvcRRNi3MoANRFYZtTQE5Uf5x+CBkw4gAIBAD7AOuWUU9K73vWuME6tFQARIGGYsUZy9nmbhBVZ3v9YCwESgAHY/H4ob+84j6n2OY9ll8N0NJxgiYRmkYY5ZM3qdOTJJ6UBXZf4rSAZ6WCpuQBAMkxVlvV1nwdAGRe7VJs4+Xi7RFDA0wooCM6OxiBYiF7DIto555yT3vzmNwcwuOc5U2TsFTSFCU3kezQLwPvmN7+Z/vKXv1Q0FkBhuAGQxHV857G3/EWy28488zlq76LUR/sFGH5oshnDd6eumPLqPe2AYg4wHHjoQXNgwEL85Mpb3vKWeG/D0ANIvOxuYee1g20Phq4vfelLsRiHjUD+EMMT5ViDReBe+Be9XvUCC0cefXRap9cMT+kUpwFsKc2ECgLKzq4w9RV8WgEl33yExxCDQ9gI1u+I2GDEQcOmaiGjlTwNB2QGC8PPL37xi8iL52gaQIZm4n7vUTZoFKiDfsmj5aAD03rZVM2aFfXJoO2V4zO2Bk56nl5DD8JCKyA4HIKEAA1AwZ5AG2BjvPOd76wslqEVGGKqifxsqwAeVne/+tWvhnYif7QU2ocVXcqYDqpVSkVTaJcbQ6JQm1afdko6VsZ+QWAZUKI4RaFW4imq9NNOoyAwhIqPpoBxBgw88XuclStXpre97W2hEYgLIKxZABvXHl547jxu1lYEtkdi/FrTeOiaIp6PmQ1mq3pCzecVbcGLHtVXyE8b9KUiXxjyBWI/ayr7bZSMd3kbAyHj6PEAB0L4vNxDM6BVXve61yV++Yt0jkN85wMQAImHFdIwfPEL8QCH5yzSYRhb82Q1adB/YaSiFMBLBTPZzIdN1miTIGnO4888Q0Dp0mHIen8lHlTA1IDqPa00CkIdjxD4IzohgOmwNQRgQeCAiOEHDcSUGgJQDnO+gI+l/S9/+csBDpb9sWMIJw/yNdCchvvqMD+rx4/2RRvzKEGDCsxaH2lr60j9WpWN18cc0aSh9vxLLk2Pbdsay/3dvX3RQagvRDqG4hh2y2H11Ccf92kFlHzFx7o+UCcfmZj1sL7y6le/OoKwOTB+WTdB8DCQWRH2CGCCqTjo29/+dmyX5Jo0UwEE8pqYBIAaw08GHf3Qpz4Mi6FHhxzrG4506KrD09GyVTg2Y45OReBUBQBNfWkjwGYYVSMmLnqcGPsUUGAKzIGsUdAe12jfid/tsIQPOV7c6B9AMRjo2b/73e9iad+9088cvzE+cNiVMpBkI1FTc7YVIV4Yyl5ZuHpVevY5Z6ce9qTkhmHq62WAAMoE2njXUkeH7FNAwQ6BQTEzUDsBCxriaK07XHfddWGn2NaAeVwzXJEOzUJ8tAc9EvrWt74Vv9dMfo0HikFiP6ow6h/HoVOzQRmuQrYuNAzJPlmnGdDCJYvTNmkV6groaQsOsJgfozKr82afAorbboMVAKAR8FlbYT+s3yDDRAjfAOPeTEXj/O1vf4t9ttgyMH9vEvDBLOGDMMDC/SCAVsc4cMVh6QT9lMx2fjtIHQCjHGJIpR021iNwN//tU0BB6DZ4bWtgpyB8zlnz9znwCs3BsGQN5HRoE66d/jvf+U7sv/Xz3eRz/clqKJb47R/eFhf4/ULNhLR8z5m2WgNIZ+jDsS69dY9zblUa4BjU4lwYwsyUylqy/opkKfYpoFgb4AMC36MxuN6wYUM4mg6oPMRwDxCIB7kHAqYHH3wwlvbvvffeeDat/6rAwpyPvSr8Z80kjlXX0AIdffQx6VhtDqdNDKkefvjR7gA5YNkD2qeA4uEBlQtz8LE9AACOA3D4wUnUMRrD015UNcDBsbgGqACLjUF+H5lhqLHkqX8GhDIeKkUSyq90ZALTLnxOykb4DImqN4cfr9Ie4H7tX9lB+/mxb0Ue0q+DxI9R8Yq5QuUyohCixfvpytNaF1MKFBt89l0gApgMkQ6BWu27h9vmmCgP0uNi3UCR8XGUTzgGLL+m/sIXvrCSFVojZgUKoTwbuPRMQAax4Pbe9743oVWIkx+GOISHe8+OIsFu/0Mccsovc7rlMgtNbQIB+qOotszR/hStrmhnm9QOYBHADz1uXSp1LUglfVW4XWBv0rdB/QM9mjIrDlPksGwybaSb7FaPAApbnngyFk0pUMYqZKaEo0lwHF3BNkuI90CAxaraoLI2IQ7GLJ+CfPazn433Pp45sYqLliIPazPiN4ICLAKIz4fja0EI8XJCkxCcDj/mWJ27f1Tq1qce/DhDUbvginqrzLc/fPpBHrWhMM0aJWo+g//R89EIaJSzzz67UlPCAYhtk2qwcA8YvvKVr8RCHPYPGsTgAHzWfpVMG3xhrWaf4jqWLk3H6vSFPh3A06/hB1Cwt7YvVmXH0BeBOGniCeo7qzQKwvTQdNFFF1XORcGWwS7JC5yhB0caHALhLTL2yq233loBCd8VoZFsOE/A7z16TB3ywPB1+OW9tWv17fRc/eoY+1QGGH5k7DL7SfqyMCP0SpnKlxlMxgfLrAKK+YOGYDfc85///AgCCGgTA8MCsM3DM2sPjhn9wAc+EMMR4GAjOESe00WuH+VVrhG6wLFGQ8+atWu1Q19fE0qTtGkbAgcMshMus3ZItSvt1yhVPDEYEPyFOpue05a4RtA2orn3MARYPENidkR6tiF87nOfq4CH54BtOqkCEBUa19I2akRq0sf2R2v4GdELQb7/Ab4t+vBdaq9cvZxGKYdMBBKiTW/ryhXbWx4CZXgxsVL78pe/PIYOAAHZd5w8AGzgEocDdvjklV39CMrPnG46/DxY0Bb+BbLVRx+ls2z1vZMAMqhfXe2JGQ81ykASLTVeyv5EYJlVQEFLYE8wW2HYYAvBVVddFWsnwcayDQCg0BwQAEDDIBQMWt/zKoCN3EyPPb2OBNP8rwIWCbxAJ5CtcsiKZ6QDZdh2qX38ugdDEFsoa4Mhb5vUjkGTphQorrQ3OsNUDEUYbyKObQIEx7XTEYchgFkFaxhORw8mH/zqHu988cknn5fDXB4+6RG8NQCHC99www2RDfaGjVJ/E0S5gMvlsiDna854e8973pP++Mc/Rnr+UWdmRLZZ8MnT96R1eifi3m11WD1+tFltHwQKGnLatXnrxFNOTfc9KBAPDMpG0fkyOqgHjVILCkCFv/EoW/8dL0Ydz2gwlc6rd5gEsyGDIi9QM85p6ckwFWdhEj8vLMeto2oRlfUPQOhZCvmw/eC0006LF4Z8cQh4KRstASgALBoIW4a2sKZCvZbpuE+0yo9+9KN4TjhnvpHe9SYf2owz0RbKzZPbmw+r95ocWU9pkWPN5GDVr0PvuUrSMEN8z0y55aGnkreHn3IAeVQFVaLubEElaPcvrK7psRD3MMWq2RrEzMv7fkY6g4uwsaia2WPFy4e7foRRtvPg5Mdrr702ogIOA4le7mEnryWoH88MCPaufPjDH07MiAin3sTxwhwZAySIMnGAw9eAZ7y2RsIJ/iHkEoAEKLJNDl+zJi0QuCUB7Yora/SaKMh0yWjo7lrYlALF2dNwhIIwuPbyNtd2+bgOw4fco7kmHwvYjCUc4r4eYjghb4RJ3QAB2g6fF4ac74Y2BNh+60wZXKNZEDwzH+JjxJIWjcRrgr/+9a/xvTSzIa/UAjquAQ3xaIcB4nrTZuoC6Ny+sXynqeWHNpD2iJ+o07kqC5/xjHSQZkCs3A7pePTauiLj30TDDuVNKVDcK2AGzoJHdUMGRDUjHE56O/dGx4XZJsJM+WuHTeQbeMTzsIh9wiceHK4DkS8AAVTUBUECIuqKzxBGG9EUPAcUaBQOLubUSYxciDyw2ciPtICCNroTRaQp+gdXAijwR+98DpVRW+SAHRbjag0q6pfm5ERgmVKgwAgYYqbQfnqiNwsZEPimfBgMpMfis+IJ8Zx754sP2fd1/j4i1PgHKBAQQ4s1lV8gAgjsDjY4rdWClTUIggYQpEOTQMSFyIf68gwgAzZOffr0pz+d3vrWt8YpC8Tj2A20FHXMt5176kF+OO7Hc+Q1FsEV1kziNwzLPFqz9khpOx3lFZ+bknIn37kzTQQS4k2pMUuGNJzeB0NgMIxjdgDVEngeKMQnLT0U1Q5zSYPLkxluP/9sMtekc1n5+AyRfGFI+Rwheuedd4amYNhgQzZp0CakB3RoEUBAOjoD9QV4tIGvDm+//fb4XZ+XvexlaY1sBg9J5AG4IPKaKiKn6IPkqYsjBXjqHgCXXEKz1MbKhFWYcqDQcDMBBqIZbMgRznM7apcHCvGJg0A2b94cjIXxMHYsIq98Lx0rHuHWCB4qCEN45I92oFzKv+SSS6KHv+9974vPP9A0hAMEiDpRJvf84AL5svufOGgG58PZLYDttzqdEhuI90t0JOpMGvIgjXlAut0l5A/0okvptEj2TS5cfkgqztdp3ZoaO+8KTioXpBtjaMpVpvntb3/7/8ndT+qSQulhNJLejoDdaBjBc8IRAt/HwCiYipp2PNLamVGoeYOFfOitnPnKc4g8nQZhu2dSHuGTJQOG+FyjASAESJ3RFJzNwlDCeSuAgbpQJ+pCPJeJrYKjLrZFyIs8AR/x77rrrvhWiNMS2ABFx6FcynEc0pgPXENuN2VRNu2nbFz+eYQpoKiyaElBayk6q0ufmo6kOx+4Py0+7NC0eOmySA8ng5uKG9fyAUr2f2weFsTwSes+KmyjMs9sKoqAAQMMY3xnFvAN/bAi38cg1OXLl1d6JI2sRTCGHkle9NpTtWH4pS99afwkG59ZwFRUPmXjqAvMBrSejdTKt54wC4G2MpwAcrYX/PSnP41vm2kfIOA57aU+XFN3dwSuDWjzDEH7c1fqw5DA7/+whsOhQQxNrNUAOtqOX4uoH3niXFeXBz8oB7J8+JLg5JNPjjNkSGMiDWTf4WP5dQHFmVhY/CgSv1IBISwqCnN5Hf+IvtjDNqHiZqBB5nyqfYSAAyz0OuIDEJgI0LimVwEOlt+Je8EFF8TMojqv3bm31iMt2gGBQbSTj9fZuOQ64gMYO+oFDxAezOcex7WFCh9oG3njrD0BBc8ADMMcv84OiLimnYCKuliLUuZERJmA9aabbkorV64MEKIVTQaIfYeP5dcFFBpGr0aAVBqD7+Mf/3ioaBjkcOLgqCyNhAkAyIwfqzJmBGnJzwylMYTRI71CynOGKmYY9BiETFl7Qnlw0FbKoO4QNhMLazfeeGMYqnQCflyBb53RoHQM7mkzDsoPh4TRPtpBngANgmd0Jp5jz1Em7UUj0NYVK1YEcJayKUlTd9pIh2F7JnkZuKRhGQLQkQf58fyOO+6I+FzntZQBYj8qM86/iaE5RmJ6BgyCoRCVoDIwGwHSUBrOc3oWzyfqCT4liYYSH83hoYgw8oRRlGut5nIpe08pD2Tyo0wACDMRGjOi008/PW3cuDFsl9///vdp06ZNUS+0AECw6ietyddoBwQIOLCFHNfah/bSRsoGAMRj5kQ55E2bDR4AxDZMzvDHkObID+oADwEiZZIfbXL+rs/u+HVpFBeA8GgEao2fNaGigACAYPjRIK4NDCpNmokIoRMPBiIc0rnHkRYm8hxmE5cey0yCnsz9ZHvHRPUgf2sDC9ZhDqcD0BH4nIP9tEznuSceDiKu60RbaBdhCA6feIS5zWgK8gUUtNt5uEzSQaQzX8gfvuBIay3HMMPQRccCXADG9SIP18s+YeNRXUCxsMkcENB4QME1jaHyVqkuFA0DUVHij0eM8Val5IejLDOZcqiDGUfZAATG4u8pUX+Dm7wRIgKwgCg73z7zIx9mYVDvaiHQDp7juKYd5O141r6ug9tDXMc3sCjbYZRPGrSfNSv1NyBte7kd5Osy7bussfy6gEIlyRgHAFBtEIKCYABhxKNyfm4Gu5dE5Br/8gwibp6JlAdD3HiYaqb4WV5gNbKfVJAF7cjVQqUtBpTLoy60l16M8CDziWv4QT7Ed37558QhHfkSh2fcUxbx4QuOMOfvzkJayOGkJR/KNH8ADYAnLxPxIPsOH8uvCyhjZbI/fN/nwNgrLPt+2/e3sA4O7AdKHcyazVH3A2U2S7+Otu8HSh3Mms1R9wNlNku/jrbvB0odzJrNUfcDZTZLv4627wdKHcyazVH3A2U2S7+Otu8HSh3Mms1R9wNlNku/jrbvB0odzJrNUfcDZTZLv4627wdKHcyazVH3A2U2S7+Otv9/wIZYZWgCgg8AAAAASUVORK5CYII=" alt="University of Redlands logo"></div>
+      <div class="institution">University of Redlands
+        <div class="div">Instructional Technology</div>
+      </div>
+    </div>
+    <h1>The Innovative Teaching &amp; Learning Partnership</h1>
+    <div class="meta">
+      <span>Cycle<b>Fall 2026 Academic Year</b></span>
+    </div>
+  </header>
+
+  <nav class="sectionnav" id="sectionnav">
+    <a href="javascript:void(0)" data-target="call-for-applications">Call for Applications</a>
+    <a href="javascript:void(0)" data-target="the-model">The Model</a>
+    <a href="javascript:void(0)" data-target="process">Process</a>
+    <a href="javascript:void(0)" data-target="scope">Scope</a>
+    <a href="javascript:void(0)" data-target="funding">Funding</a>
+    <a href="javascript:void(0)" data-target="requirements">Requirements</a>
+    <a href="javascript:void(0)" data-target="evaluation">Evaluation</a>
+  </nav>
+
+  <div class="content">
+
+    <div class="lede">
+      Partner with the Instructional Technology team to bring new technology-enhanced learning experiences into your courses. We invite proposals that pursue creative new uses of technology, as well as proposals that seek a technological solution to an existing course challenge — from immersive XR Lab simulations and hands-on Makerspace prototyping, to Canvas course redesigns, active-learning strategies, and refreshed digital course materials. <strong>Every selected project is paired with an Instructional Designer</strong> and, where the project calls for it, direct access to the XR Lab, Makerspace, Canvas, and specialized department equipment.
+    </div>
+
+    <div class="cta-box">
+      <div class="cta-text">
+        <h3>Ready to apply?</h3>
+        <p>Submit your Faculty Fellow application — project details, budget, and department chair sign-off all in one form.</p>
+      </div>
+      <div>
+        <a class="cta-btn" href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=fW1rSZ4IGEOJ79n992Cq_fbdtBZ_j9tFilOelo9HAQ9UM1ZINEtERUtWM0VIRlY1TEdYUFNQNlpCOS4u" target="_blank" rel="noopener">Submit Your Proposal →</a>
+      </div>
+    </div>
+
+    <section id="call-for-applications">
+      <p class="eyebrow">Call for Applications <a class="jump" href="javascript:void(0)" data-target="top">↑ top</a></p>
+      <h2>What a Partnership Can Accomplish</h2>
+      <p>A few examples of the kind of work this partnership is built to support:</p>
+      <ul>
+        <li>Build immersive VR/AR learning modules in the XR Lab for experiential or simulation-based learning</li>
+        <li>Prototype physical models, manipulatives, or student projects using the Makerspace</li>
+        <li>Produce short animated or narrated videos to engage students in asynchronous lectures</li>
+        <li>Design and build interactive Canvas modules for a fully redesigned course</li>
+        <li>Develop AI-supported assessments and adaptive learning activities</li>
+        <li>Manage and standardize multiple sections of a Canvas course</li>
+        <li>Design a computer lab–based workshop or hands-on lab experience tied to course outcomes</li>
+      </ul>
+      <div class="resource-grid">
+        <div class="resource-card">
+          <h4>XR Lab</h4>
+          <p class="ex">For example</p>
+          <p>The XR Lab is dedicated to immersive, experiential learning through Virtual Reality. Your discipline may already have a VR application — a virtual anatomy lab, a historical walkthrough, a chemistry simulation — that just needs to be licensed. Fund the software so your course gets hands-on VR time in the lab.</p>
+        </div>
+        <div class="resource-card">
+          <h4>Makerspace</h4>
+          <p class="ex">For example</p>
+          <p>Students are asked to design a solution on paper but never build it. Give them a Makerspace project where they prototype, test, and iterate on a physical model as part of the course.</p>
+        </div>
+        <div class="resource-card">
+          <h4>Canvas</h4>
+          <p class="ex">For example</p>
+          <p>A course still runs on static PDFs and slide decks. Rebuild a unit as an interactive Canvas module with embedded checks for understanding and a clear mastery path.</p>
+        </div>
+        <div class="resource-card">
+          <h4>Department-Oriented Projects</h4>
+          <p class="ex">For example</p>
+          <p>Fund a piece of specialized equipment a specific department needs but couldn't otherwise budget for — like an <a href="https://www.topobox.co/educator-edition" target="_blank" rel="noopener">augmented reality topographic sandbox</a> for Environmental Studies (EVST), giving students hands-on, real-time modeling of watersheds, elevation, and terrain.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="the-model">
+      <p class="eyebrow">The Model <a class="jump" href="javascript:void(0)" data-target="top">↑ top</a></p>
+      <h2>How the Partnership Works</h2>
+      <p>The ITLP is an Instructional Technology initiative that supports and promotes effective, creative uses of technology to enhance teaching and learning at Redlands. Each partnership is a collaboration between two parties:</p>
+      <h3>Faculty Fellows</h3>
+      <p>Faculty who sponsor a project they want to develop, in partnership with Instructional Technology, over the course of a term or academic year.</p>
+      <h3>Instructional Designers</h3>
+      <p>Each selected project is assigned an Instructional Designer from the Instructional Technology team, who works directly with the faculty fellow from initial design through implementation and assessment, and connects the project to the right technology resources.</p>
+    </section>
+
+    <section id="process">
+      <p class="eyebrow">Process <a class="jump" href="javascript:void(0)" data-target="top">↑ top</a></p>
+      <h2>How to Apply</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-body"><p><b>Open the online application form.</b> There's no separate document to download or prepare in advance — everything is completed in the form.</p></div>
+        </div>
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-body"><p><b>Complete your project overview and proposed budget</b> directly in the form — project idea, goals, the course(s) it will support, technology resources needed, and a budget breakdown (stipend, equipment, and any production or development costs).</p></div>
+        </div>
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-body"><p><b>Provide your department chair's sign-off</b> — their name, email, and a signed endorsement upload — then submit.</p></div>
+        </div>
+      </div>
+
+      <div class="cta-box compact">
+        <div class="cta-text">
+          <h3>Start your application</h3>
+          <p>Applications are accepted on a rolling basis for the Fall 2026 cycle.</p>
+        </div>
+        <div>
+          <a class="cta-btn" href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=fW1rSZ4IGEOJ79n992Cq_fbdtBZ_j9tFilOelo9HAQ9UM1ZINEtERUtWM0VIRlY1TEdYUFNQNlpCOS4u" target="_blank" rel="noopener">Go to the Application →</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="scope">
+      <p class="eyebrow">Scope <a class="jump" href="javascript:void(0)" data-target="top">↑ top</a></p>
+      <h2>What Projects the ITLP Supports</h2>
+
+      <div class="accordion">
+        <div class="acc-item highlight">
+          <button class="acc-header" type="button">
+            <span>Immersive &amp; Experiential Learning — XR Lab</span>
+            <span class="acc-icon">+</span>
+          </button>
+          <div class="acc-panel">
+            <div class="acc-panel-inner">
+              <p>Develop VR/AR simulations, virtual field trips, or 3D visualizations that give students experiences not otherwise possible in a traditional classroom.</p>
+              <ul class="complist">
+                <li>VR/AR simulations and virtual field trips for scenarios that are costly, distant, or unsafe to replicate in person</li>
+                <li>3D visualization and spatial modeling for STEM, design, and humanities coursework</li>
+                <li>Safe rehearsal of high-risk or high-cost procedures through simulation before real-world application</li>
+                <li>Headset lending and short VR/AR literacy sessions so students can use the tools independently</li>
+                <li>Collaborative virtual environments that bring remote, hybrid, or multi-section classes into one shared space</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="acc-item highlight">
+          <button class="acc-header" type="button">
+            <span>Hands-On &amp; Applied Learning — Makerspace</span>
+            <span class="acc-icon">+</span>
+          </button>
+          <div class="acc-panel">
+            <div class="acc-panel-inner">
+              <p>Incorporate design thinking, prototyping, and physical or digital fabrication into coursework through Makerspace tools and space.</p>
+              <ul class="complist">
+                <li>3D printing and rapid prototyping for student projects, capstones, and design assignments</li>
+                <li>Laser cutting and digital fabrication tied directly to course deliverables</li>
+                <li>Electronics, circuitry, and physical computing (Arduino, Raspberry Pi) modules for applied coursework</li>
+                <li>Design-thinking workshops built into the curriculum, not offered as a one-off add-on</li>
+                <li>Materials and consumables support so cost isn't a barrier to hands-on assignments</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="acc-item highlight">
+          <button class="acc-header" type="button">
+            <span>Course Architecture &amp; Delivery — Canvas</span>
+            <span class="acc-icon">+</span>
+          </button>
+          <div class="acc-panel">
+            <div class="acc-panel-inner">
+              <p>Rebuild how a course is structured and delivered in Canvas so the platform actively supports learning, not just hosts files.</p>
+              <ul class="complist">
+                <li>Interactive, accessibility-checked modules built to WCAG standards</li>
+                <li>Mastery paths and adaptive release sequenced to individual student progress</li>
+                <li>Kaltura video repository integration with embedded, gradable comprehension checks</li>
+                <li>Standardized rubrics and grading workflows applied consistently across multiple sections</li>
+                <li>Analytics and early-alert dashboards that flag at-risk students before it's too late to intervene</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="acc-item highlight">
+          <button class="acc-header" type="button">
+            <span>Active Learning &amp; Student Engagement</span>
+            <span class="acc-icon">+</span>
+          </button>
+          <div class="acc-panel">
+            <div class="acc-panel-inner">
+              <p>Design, implement, and evaluate innovative pedagogical approaches that use learning technology to engage students and improve outcomes — particularly well suited to large or high-enrollment courses.</p>
+              <ul class="complist">
+                <li>Polling, live-response, and low-stakes formative check-ins built directly into class sessions</li>
+                <li>Gamified or scenario-based activities that raise participation in large lecture sections</li>
+                <li>Peer-review and collaborative workflows supported by structured digital tools</li>
+                <li>Pre/post assessment design to measure engagement gains, not just anecdotal impressions</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="acc-item highlight">
+          <button class="acc-header" type="button">
+            <span>Course Design or Redesign</span>
+            <span class="acc-icon">+</span>
+          </button>
+          <div class="acc-panel">
+            <div class="acc-panel-inner">
+              <p>Design a new course or redesign an existing course for a new modality (online, hybrid, HyFlex) or reimagine it around new technologies.</p>
+              <ul class="complist">
+                <li>Full course builds for online, hybrid, or HyFlex delivery from the ground up</li>
+                <li>Modality conversion of an existing in-person course without losing instructional quality</li>
+                <li>Backward-design mapping from learning outcomes to activities, assessments, and technology</li>
+                <li>Pilot-term testing with built-in revision before full rollout</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="acc-item highlight">
+          <button class="acc-header" type="button">
+            <span>Digital Course Materials Redesign</span>
+            <span class="acc-icon">+</span>
+          </button>
+          <div class="acc-panel">
+            <div class="acc-panel-inner">
+              <p>Develop interactive digital course materials or shareable media that departments can reuse across sections and future terms.</p>
+              <ul class="complist">
+                <li>Rebuilding static lecture slides or PDFs into interactive, media-rich modules</li>
+                <li>Departmental content libraries that standardize materials across multiple sections</li>
+                <li>Short-form video, animation, or narrated content for asynchronous instruction</li>
+                <li>Version-controlled templates so materials stay current term over term</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="funding">
+      <p class="eyebrow">Investment <a class="jump" href="javascript:void(0)" data-target="top">↑ top</a></p>
+      <h2>Funding: Stipends &amp; Equipment</h2>
+
+      <div class="range-banner">
+        <div class="figure">$1,000&thinsp;–&thinsp;$6,000<span>Funding per project</span></div>
+        <div class="desc">Award amount scales to the depth, scope, and duration of the proposed work — whether that means outfitting an XR Lab simulation, stocking Makerspace materials, or rebuilding a course's architecture in Canvas. Requested budgets are itemized in the application form and reviewed as part of the evaluation process.</div>
+      </div>
+
+      <div class="fund-grid">
+        <div class="fund-card">
+          <h4>Faculty Stipend</h4>
+          <p>Compensation for time invested in course redesign, content development, and collaboration with an assigned Instructional Designer outside of normal contracted duties.</p>
+        </div>
+        <div class="fund-card">
+          <h4>Equipment &amp; Materials</h4>
+          <p>Technology and software licenses, XR headsets or peripherals, Makerspace materials and supplies, recording equipment, or other tools tied directly to the project's goals.</p>
+        </div>
+        <div class="fund-card">
+          <h4>Production &amp; Development Support</h4>
+          <p>Course material development or third-party platform and licensing fees needed to execute the project.</p>
+        </div>
+      </div>
+
+      <div class="scale-row">
+        <div class="scale-card">
+          <div class="amt">$1,000 – $2,500</div>
+          <p>Smaller-scope projects — a single module redesign, a short video series, or a modest Makerspace activity.</p>
+        </div>
+        <div class="scale-card">
+          <div class="amt">$2,500 – $6,000</div>
+          <p>Larger, multi-course or multi-term projects involving significant XR development, custom equipment, or full course redesigns.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="requirements">
+      <p class="eyebrow">Requirements <a class="jump" href="javascript:void(0)" data-target="top">↑ top</a></p>
+      <h2>What's Required of Faculty Fellows</h2>
+      <ul>
+        <li>Applicants must be full-time University of Redlands faculty (including URLA campus faculty) and submit a description of the project they wish to sponsor.</li>
+        <li>The proposed project must be endorsed by the relevant department or school.</li>
+        <li>Faculty fellows meet periodically as a cohort — virtually or in person — to share progress and provide feedback to fellow participants.</li>
+        <li>Faculty fellows commit to participating in project assessment and, where appropriate, sharing outcomes with the broader campus community.</li>
+      </ul>
+    </section>
+
+    <section id="evaluation">
+      <p class="eyebrow">Selection <a class="jump" href="javascript:void(0)" data-target="top">↑ top</a></p>
+      <h2>Evaluation Criteria</h2>
+      <p>Because resources are limited, only a select number of projects can be supported each cycle. Proposals are evaluated on:</p>
+      <ul class="criteria">
+        <li>Relevance to department, school, and institutional priorities</li>
+        <li>Anticipated impact on student learning</li>
+        <li>Feasibility of the proposed project plan and timeline</li>
+        <li>Clarity of how project success will be measured</li>
+        <li>Potential for the approach to be applied to other courses or programs</li>
+        <li>Reasonableness of the requested budget relative to project scope</li>
+      </ul>
+    </section>
+
+    <div class="cta-box" style="margin-top:34px;">
+      <div class="cta-text">
+        <h3>Ready to bring your idea to the classroom?</h3>
+        <p>Submit your Faculty Fellow application for the Fall 2026 cycle.</p>
+      </div>
+      <div>
+        <a class="cta-btn" href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=fW1rSZ4IGEOJ79n992Cq_fbdtBZ_j9tFilOelo9HAQ9UM1ZINEtERUtWM0VIRlY1TEdYUFNQNlpCOS4u" target="_blank" rel="noopener">Submit Your Proposal →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="closing">
+    <div class="who">Questions?
+      <span>Please direct inquiries to the Instructional Technology team, University of Redlands.<br>Sr. Director Cheyne Murray &nbsp;·&nbsp; <a href="mailto:cheyne_murray@redlands.edu" style="color:var(--maroon-deep);font-weight:600;text-decoration:underline;">cheyne_murray@redlands.edu</a></span>
+    </div>
+    <a class="backtotop" href="javascript:void(0)" data-target="top">Back to top ↑</a>
+  </footer>
+
+</div>
+
+<script>
+  // Intercept all internal nav/jump links and scroll instantly via JS —
+  // avoids the "open external link" prompt that hash-fragment hrefs
+  // trigger inside the sandboxed preview iframe.
+  document.addEventListener('click', function(e){
+    const link = e.target.closest('a[data-target]');
+    if (link) {
+      e.preventDefault();
+      const targetId = link.getAttribute('data-target');
+      if (targetId === 'top') {
+        window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+      } else {
+        const el = document.getElementById(targetId);
+        if (el) el.scrollIntoView({ behavior: 'auto', block: 'start' });
+      }
+      return;
+    }
+    const header = e.target.closest('.acc-header');
+    if (header) {
+      const item = header.closest('.acc-item');
+      const wasOpen = item.classList.contains('open');
+      item.parentElement.querySelectorAll('.acc-item.open').forEach(i => i.classList.remove('open'));
+      if (!wasOpen) item.classList.add('open');
+    }
+  });
+
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.sectionnav a');
+  const spy = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const link = document.querySelector('.sectionnav a[data-target="' + entry.target.id + '"]');
+      if (!link) return;
+      if (entry.isIntersecting) {
+        navLinks.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+  sections.forEach(s => spy.observe(s));
+</script>
+
+</body>
+</html>
