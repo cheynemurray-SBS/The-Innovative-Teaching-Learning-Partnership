@@ -560,6 +560,14 @@
 </div>
 
 <script>
+  const navLinks = document.querySelectorAll('.sectionnav a');
+
+  function setActiveNav(targetId){
+    navLinks.forEach(l => l.classList.remove('active'));
+    const link = document.querySelector('.sectionnav a[data-target="' + targetId + '"]');
+    if (link) link.classList.add('active');
+  }
+
   // Intercept all internal nav/jump links and scroll instantly via JS —
   // avoids the "open external link" prompt that hash-fragment hrefs
   // trigger inside the sandboxed preview iframe.
@@ -568,8 +576,10 @@
     if (link) {
       e.preventDefault();
       const targetId = link.getAttribute('data-target');
+      if (link.closest('.sectionnav')) setActiveNav(targetId);
       if (targetId === 'top') {
         window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+        navLinks.forEach(l => l.classList.remove('active'));
       } else {
         const el = document.getElementById(targetId);
         if (el) el.scrollIntoView({ behavior: 'auto', block: 'start' });
@@ -585,19 +595,21 @@
     }
   });
 
+  // Scrollspy for natural scrolling — activates a tab once its section's
+  // top edge crosses into the upper part of the viewport.
   const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.sectionnav a');
-  const spy = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      const link = document.querySelector('.sectionnav a[data-target="' + entry.target.id + '"]');
-      if (!link) return;
-      if (entry.isIntersecting) {
-        navLinks.forEach(l => l.classList.remove('active'));
-        link.classList.add('active');
-      }
+  let scrollTimer = null;
+  window.addEventListener('scroll', function(){
+    if (scrollTimer) return;
+    scrollTimer = requestAnimationFrame(function(){
+      scrollTimer = null;
+      let current = sections[0];
+      sections.forEach(function(s){
+        if (s.getBoundingClientRect().top - 80 <= 0) current = s;
+      });
+      if (current) setActiveNav(current.id);
     });
-  }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
-  sections.forEach(s => spy.observe(s));
+  }, { passive: true });
 </script>
 
 </body>
