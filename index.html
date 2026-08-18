@@ -20,7 +20,7 @@
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:auto;}
-  html,body{margin:0;padding:0;background:#E9E6E1;font-family:'Source Sans 3', -apple-system, sans-serif;color:var(--ink);}
+  html,body{margin:0;padding:0;background:#E9E6E1;font-family:'Source Sans 3', -apple-system, sans-serif;color:var(--ink);overflow-x:hidden;width:100%;max-width:100%;}
   .page{max-width:880px;margin:0 auto;background:var(--paper);box-shadow:0 0 0 1px rgba(0,0,0,0.04), 0 20px 60px rgba(0,0,0,0.12);}
 
   .letterhead{
@@ -84,7 +84,8 @@
   .step-num{counter-increment:step;flex-shrink:0;width:30px;height:30px;border-radius:50%;background:var(--maroon);color:#fff;font-family:'Source Serif 4', serif;font-weight:600;font-size:13.5px;display:flex;align-items:center;justify-content:center;}
   .step-num::before{content:counter(step);}
   .step-body p{margin:0;}
-  .step-body b{color:var(--ink);font-family:'Source Serif 4', serif;}
+  .step-body p + p{margin-top:5px;color:var(--ink-soft);font-size:14.5px;line-height:1.55;}
+  .step-body b{color:var(--ink);font-family:'Source Serif 4', serif;font-size:15.5px;}
 
   .cat{margin-bottom:20px;padding-left:16px;border-left:2px solid var(--gray-light);}
   .cat b{display:block;font-family:'Source Serif 4', serif;font-size:15.5px;color:var(--ink);margin-bottom:3px;}
@@ -270,13 +271,13 @@
   <div class="content">
 
     <div class="lede">
-      Partner with the Instructional Technology team to bring new technology-enhanced learning experiences into your courses. We invite proposals that pursue creative new uses of technology, as well as proposals that seek a technological solution to an existing course challenge — from immersive XR Lab simulations and hands-on Makerspace prototyping, to Canvas course redesigns, active-learning strategies, and refreshed digital course materials. <strong>Every selected project is paired with an Instructional Designer</strong> and, where the project calls for it, direct access to the XR Lab, Makerspace, Canvas, and specialized department equipment.
+      Partner with the Instructional Technology team to transform your courses with innovative, technology-enhanced learning experiences. We invite faculty to submit proposals that explore creative applications of educational technology or deploy targeted solutions to your specific teaching challenges. Whether you are designing immersive XR Lab simulations, facilitating hands-on Makerspace prototyping, redesigning your Canvas environment, integrating active-learning strategies, or updating digital course materials, we want to help bring your vision to life. <strong>Every selected project pairs you with a dedicated Instructional Designer</strong> and the resources needed to elevate your students' learning.
     </div>
 
     <div class="cta-box">
       <div class="cta-text">
         <h3>Ready to apply?</h3>
-        <p>Submit your Faculty Fellow application — project details, budget, and department chair sign-off all in one form.</p>
+        <p>Apply to become a Faculty Fellow — project details, budget, and department chair sign-off all in one form.</p>
       </div>
       <div>
         <a class="cta-btn" href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=fW1rSZ4IGEOJ79n992Cq_fbdtBZ_j9tFilOelo9HAQ9UM1ZINEtERUtWM0VIRlY1TEdYUFNQNlpCOS4u" target="_blank" rel="noopener">Submit Your Proposal →</a>
@@ -285,73 +286,83 @@
 
     <section id="call-for-applications">
       <p class="eyebrow">Call for Applications <a class="jump" href="javascript:void(0)" data-target="top">↑ top</a></p>
-      <h2>What a Partnership Can Accomplish</h2>
-      <p>A few examples of the kind of work this partnership is built to support:</p>
+      <h2>What We Can Build Together: Examples of Faculty-Led Innovation</h2>
+      <p>Here are a few examples of the kind of teaching and learning transformations this partnership is built to support:</p>
       <ul>
-        <li>Build immersive VR/AR learning modules in the XR Lab for experiential or simulation-based learning</li>
-        <li>Prototype physical models, manipulatives, or student projects using the Makerspace</li>
-        <li>Produce short animated or narrated videos to engage students in asynchronous lectures</li>
-        <li>Design and build interactive Canvas modules for a fully redesigned course</li>
-        <li>Develop AI-supported assessments and adaptive learning activities</li>
-        <li>Manage and standardize multiple sections of a Canvas course</li>
-        <li>Design a computer lab–based workshop or hands-on lab experience tied to course outcomes</li>
+        <li>Create immersive VR/AR simulations in the XR Lab for experiential, hands-on learning.</li>
+        <li>Bring student projects to life by prototyping physical models and manipulatives in the Makerspace.</li>
+        <li>Produce engaging, short animated or narrated videos to elevate your asynchronous lectures.</li>
+        <li>Transform your Canvas site into an interactive, student-centered learning environment.</li>
+        <li>Develop AI-supported assessments and adaptive learning activities that personalize the student experience.</li>
+        <li>Streamline and standardize multi-section Canvas courses to ensure a consistent student experience and save you time.</li>
+        <li>Design computer lab workshops or hands-on lab experiences tightly aligned with your core learning outcomes.</li>
       </ul>
+
+      <h3 style="margin-top:34px;">Spotlight on Resources: How We Can Support Your Courses</h3>
+
       <div class="resource-grid">
         <div class="resource-card">
-          <h4>XR Lab</h4>
-          <p class="ex">For example</p>
-          <p>The XR Lab is dedicated to immersive, experiential learning through Virtual Reality. Your discipline may already have a VR application — a virtual anatomy lab, a historical walkthrough, a chemistry simulation — that just needs to be licensed. Fund the software so your course gets hands-on VR time in the lab.</p>
+          <h4>The XR Lab: Immersive &amp; Experiential Learning</h4>
+          <p>Does your discipline already use a VR application that just needs licensing? Whether it's a virtual anatomy lab, a historical walkthrough, or a chemistry simulation, we can help you secure the software and integrate it into your curriculum. This ensures your students get dedicated, hands-on VR time in the lab to deeply engage with complex concepts.</p>
         </div>
         <div class="resource-card">
-          <h4>Makerspace</h4>
-          <p class="ex">For example</p>
-          <p>Students are asked to design a solution on paper but never build it. Give them a Makerspace project where they prototype, test, and iterate on a physical model as part of the course.</p>
+          <h4>The Makerspace: From Concept to Creation</h4>
+          <p>Move students beyond paper designs. Integrate a Makerspace project into your syllabus where students can physically prototype, test, and iterate on their models. This partnership allows you to turn theoretical concepts into tangible, hands-on learning experiences right here on campus.</p>
         </div>
         <div class="resource-card">
-          <h4>Canvas</h4>
-          <p class="ex">For example</p>
-          <p>A course still runs on static PDFs and slide decks. Rebuild a unit as an interactive Canvas module with embedded checks for understanding and a clear mastery path.</p>
+          <h4>Canvas: Interactive &amp; Engaging Course Design</h4>
+          <p>Is your course still relying heavily on static PDFs and slide decks? Let's rebuild a unit into an interactive Canvas module. We will help you embed knowledge checks, create clear mastery paths, and design a digital environment that keeps your students actively engaged and on track.</p>
         </div>
         <div class="resource-card">
-          <h4>Department-Oriented Projects</h4>
-          <p class="ex">For example</p>
-          <p>Fund a piece of specialized equipment a specific department needs but couldn't otherwise budget for — like an <a href="https://www.topobox.co/educator-edition" target="_blank" rel="noopener">augmented reality topographic sandbox</a> for Environmental Studies (EVST), giving students hands-on, real-time modeling of watersheds, elevation, and terrain.</p>
+          <h4>Department-Specific Equipment &amp; Resources</h4>
+          <p>Need specialized equipment that isn't in your current departmental budget? We can help fund tools that directly enhance your specific curriculum. For example, through ongoing conversations with Professor Jenkins in Environmental Studies (EVST), we are exploring the acquisition of an <a href="https://www.topobox.co/educator-edition" target="_blank" rel="noopener">augmented reality topographic sandbox</a>. This tool would give your students hands-on, real-time modeling of watersheds, elevation, and terrain, turning abstract concepts into tangible, memorable learning experiences.</p>
         </div>
       </div>
     </section>
 
     <section id="the-model">
       <p class="eyebrow">The Model <a class="jump" href="javascript:void(0)" data-target="top">↑ top</a></p>
-      <h2>How the Partnership Works</h2>
-      <p>The ITLP is an Instructional Technology initiative that supports and promotes effective, creative uses of technology to enhance teaching and learning at Redlands. Each partnership is a collaboration between two parties:</p>
-      <h3>Faculty Fellows</h3>
-      <p>Faculty who sponsor a project they want to develop, in partnership with Instructional Technology, over the course of a term or academic year.</p>
-      <h3>Instructional Designers</h3>
-      <p>Each selected project is assigned an Instructional Designer from the Instructional Technology team, who works directly with the faculty fellow from initial design through implementation and assessment, and connects the project to the right technology resources.</p>
+      <h2>The Partnership Model: How We Work Together</h2>
+      <p>The Instructional Technology Learning Partnership (ITLP) is designed to support and amplify your creative, effective use of technology in the classroom. At its core, this initiative is a true collaboration between you and the Instructional Technology team at Redlands.</p>
+      <p>Each successful partnership brings together two key partners:</p>
+      <h3>You as a Faculty Fellow</h3>
+      <p>Any full-time faculty member is welcome to apply. If your proposal is selected, you will be officially designated as an ITLP Faculty Fellow for that term or academic year. This title recognizes your commitment to pedagogical innovation and connects you with personalized, dedicated support for your project. <em>(Note: The Faculty Fellow title is conferred upon selection, not at the time of application.)</em></p>
+      <h3>Your Dedicated Instructional Designer</h3>
+      <p>You will be paired with an expert Instructional Designer from our team. Think of them as a collaborative partner and project guide. They will work directly with you from the initial brainstorming phase through implementation and assessment. Their role is to help refine your vision, streamline the development process, and seamlessly connect you to the right technology resources — whether that means coordinating with the XR Lab, scheduling Makerspace time, or optimizing your Canvas course.</p>
     </section>
 
     <section id="process">
       <p class="eyebrow">Process <a class="jump" href="javascript:void(0)" data-target="top">↑ top</a></p>
       <h2>How to Apply</h2>
+      <div class="chip" style="display:inline-block;margin-bottom:20px;">⏰ Application deadline: September 9, 2026</div>
       <div class="steps">
         <div class="step">
           <div class="step-num"></div>
-          <div class="step-body"><p><b>Open the online application form.</b> There's no separate document to download or prepare in advance — everything is completed in the form.</p></div>
+          <div class="step-body">
+            <p><b>Access the Online Form</b></p>
+            <p>The entire application is completed in a single, streamlined online form. There are no separate documents to download, format, or prepare in advance.</p>
+          </div>
         </div>
         <div class="step">
           <div class="step-num"></div>
-          <div class="step-body"><p><b>Complete your project overview and proposed budget</b> directly in the form — project idea, goals, the course(s) it will support, technology resources needed, and a budget breakdown (stipend, equipment, and any production or development costs).</p></div>
+          <div class="step-body">
+            <p><b>Outline Your Project and Budget</b></p>
+            <p>Directly within the form, you will provide a brief overview of your project idea, learning goals, the specific course(s) it will support, and the technology resources needed. You will also include a simple budget breakdown (e.g., faculty stipend, equipment, or development costs).</p>
+          </div>
         </div>
         <div class="step">
           <div class="step-num"></div>
-          <div class="step-body"><p><b>Provide your department chair's sign-off</b> — their name, email, and a signed endorsement upload — then submit.</p></div>
+          <div class="step-body">
+            <p><b>Secure Department Chair Support</b></p>
+            <p>Before submitting, you will need to provide your department chair's name and email address, along with a brief, signed endorsement of your proposal.</p>
+          </div>
         </div>
       </div>
 
       <div class="cta-box compact">
         <div class="cta-text">
           <h3>Start your application</h3>
-          <p>Applications are accepted on a rolling basis for the Fall 2026 cycle.</p>
+          <p>Applications for the Fall 2026 cycle are due by September 9, 2026.</p>
         </div>
         <div>
           <a class="cta-btn" href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=fW1rSZ4IGEOJ79n992Cq_fbdtBZ_j9tFilOelo9HAQ9UM1ZINEtERUtWM0VIRlY1TEdYUFNQNlpCOS4u" target="_blank" rel="noopener">Go to the Application →</a>
@@ -541,7 +552,7 @@
     <div class="cta-box" style="margin-top:34px;">
       <div class="cta-text">
         <h3>Ready to bring your idea to the classroom?</h3>
-        <p>Submit your Faculty Fellow application for the Fall 2026 cycle.</p>
+        <p>Apply to become a Faculty Fellow for the Fall 2026 cycle.</p>
       </div>
       <div>
         <a class="cta-btn" href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=fW1rSZ4IGEOJ79n992Cq_fbdtBZ_j9tFilOelo9HAQ9UM1ZINEtERUtWM0VIRlY1TEdYUFNQNlpCOS4u" target="_blank" rel="noopener">Submit Your Proposal →</a>
